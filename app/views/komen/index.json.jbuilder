@@ -1,0 +1,1 @@
+json.array! @komen, partial: 'komen/koman', as: :koman

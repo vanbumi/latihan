@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Komen</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @komen.each do |koman| %>
+      <tr>
+        <td><%= koman.name %></td>
+        <td><%= koman.comment %></td>
+        <td><%= link_to 'Show', koman %></td>
+        <td><%= link_to 'Edit', edit_koman_path(koman), remote: true %></td>
+        <td><%= link_to 'Destroy', koman, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Koman', new_koman_path, class: 'btn btn-default new_one', remote: true %>
+
+<div id="name"></div>
+<div id="comment"></div>

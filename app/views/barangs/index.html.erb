@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Barang</h1>
+
+<div class="col-sm-6">
+  <%= link_to "+ Add", "#", :id => "new_link" %>
+  <%= render 'form' %>
+</div>
+
+<br><br><br>
+
+<table class="table table-hover table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Kode</th>
+      <th>Nama</th>
+      <th>Harga</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody id="barangs">
+    <%= render @barangs %>
+  </tbody>
+</table>
+
+<br><br><br>
+
+<script>
+  $("#new_link").click(function(){
+    $("#form-barang").fadeToggle(1000);
+    $(".form-kode").focus();
+  });
+</script>

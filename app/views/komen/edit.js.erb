@@ -1,0 +1,13 @@
+$(function(){
+	$(".edit_koman").remove();
+	$(".new_koman").remove();
+	$("tr").removeClass("edit_row");
+	$(".new_one").hide().after("<%= j render 'form' %>");
+
+	$("tr").find("td:first").each(function(){
+			if ($(this).text() == ("<%= raw @koman.name %>")) {
+				// alert("<%= raw @koman.name %>");
+				$(this).parent().addClass("edit_row");
+			}
+		});
+});

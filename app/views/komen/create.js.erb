@@ -1,0 +1,12 @@
+$(function(){
+
+	// alert("<%= raw @koman.name %>");
+
+	$(".new_koman").hide();
+	$(".new_one").show();
+
+	// $("<tr><td><%= raw @koman.name %></td><td><%= raw @koman.comment %></td><td></td><td></td><td></td></tr>").appendTo($("table"));		
+
+	$("<tr><td><%= raw @koman.name %></td><td><%= raw @koman.comment %></td><td><%= j link_to 'Show', @koman %></td><td><%= j link_to 'Edit', edit_koman_path(@koman), remote: true %></td><td><%= j link_to 'Destroy', @koman, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td></tr>").appendTo($("table"));
+
+});

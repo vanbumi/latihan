@@ -1,0 +1,36 @@
+<section id="form-barang">
+
+  <%= form_for(@barang, remote: true) do |f| %>
+    <% if @barang.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(barang.errors.count, "error") %> prohibited this barang from being saved:</h2>
+
+        <ul>
+        <% barang.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :kode %>
+      <%= f.text_field :kode, class:"form-control form-kode" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :nama %>
+      <%= f.text_field :nama, class:"form-control form-nama" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :harga %>
+      <%= f.text_field :harga, class:"form-control form-harga" %>
+    </div>
+
+    <div class="actions">
+      <%= f.button "Simpan", class:"btn btn-primary", data: {disable_with: "Tunggu.."} %>
+    </div>
+  <% end %>
+
+</section>

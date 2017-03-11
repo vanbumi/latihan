@@ -1,0 +1,1 @@
+json.array! @tbdata, partial: 'tbdata/tbdatum', as: :tbdatum

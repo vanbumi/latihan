@@ -1,0 +1,8 @@
+<tr id="barang_<% barang.id %>">
+  <td><%= barang.kode %></td>
+  <td><%= barang.nama %></td>
+  <td><%= barang.harga %></td>
+  <td><%= link_to 'Show', barang %></td>
+  <td><%= link_to 'Edit', edit_barang_path(barang), remote: true, class:"btn btn-primary btn-xs" %></td>
+  <td><%= link_to 'Destroy', barang, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @koman.name %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @koman.comment %>
+</p>
+
+<%= link_to 'Edit', edit_koman_path(@koman) %> |
+<%= link_to 'Back', komen_path %>

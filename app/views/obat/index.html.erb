@@ -1,0 +1,12 @@
+<h1>Daftar Obat</h1>
+
+<%= link_to "New Obat", new_obat_path, id: "new_link" %>
+<h2>Incomplete Tasks</h2>
+<div class="tasks" id="incomplete_tasks">
+  <%= render @incomplete_tasks %>
+</div>
+<h2>Comlpete Tasks</h2>
+<div class="tasks" id="complete_tasks">
+  <%= render @complete_tasks %>
+</div>
+

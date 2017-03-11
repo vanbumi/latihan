@@ -1,0 +1,2 @@
+module KomenHelper
+end

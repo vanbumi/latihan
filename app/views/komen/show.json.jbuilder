@@ -1,0 +1,1 @@
+json.partial! "komen/koman", koman: @koman

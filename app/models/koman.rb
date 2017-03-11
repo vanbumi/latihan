@@ -1,0 +1,2 @@
+class Koman < ApplicationRecord
+end

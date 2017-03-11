@@ -1,0 +1,2 @@
+class Obat < ApplicationRecord
+end

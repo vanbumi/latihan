@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kode:</strong>
+  <%= @barang.kode %>
+</p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @barang.nama %>
+</p>
+
+<p>
+  <strong>Harga:</strong>
+  <%= @barang.harga %>
+</p>
+
+<%= link_to 'Edit', edit_barang_path(@barang) %> |
+<%= link_to 'Back', barangs_path %>

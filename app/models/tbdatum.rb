@@ -1,0 +1,2 @@
+class Tbdatum < ApplicationRecord
+end

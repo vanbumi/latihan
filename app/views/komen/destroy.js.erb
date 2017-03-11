@@ -1,0 +1,5 @@
+$('tr').find('td:first').each(function(){
+	if ($(this).text() == ('<%= raw @koman.name %>')) {
+		$(this).parent().remove();
+	}
+});

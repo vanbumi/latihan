@@ -1,0 +1,21 @@
+<h1>Search here</h1>
+	<%= form_tag data_search_path, method: 'GET', remote: true do %>
+		<%= text_field_tag :search, '', size:25, :autocomplete => 'off' %>
+		<%= submit_tag 'Search', :id => 'search_key' %>
+	<% end %>
+
+<script charset="utf-8">
+	// $(function(){
+	// 	$('#search').on('keyup', function(){
+	// 		$('#search_key').click();
+	// 	});
+	// });
+	$(function(){
+	  $('#search').on('keyup', function(){
+	  	var x = ( $('#search').val() ).trim();
+	  	if (x.length > 0){
+	    	$('#search_key').click();
+	    }
+	  });
+	});
+</script>

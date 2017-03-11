@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tbdatum.name %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @tbdatum.level %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @tbdatum.age %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @tbdatum.address %>
+</p>
+
+<%= link_to 'Edit', edit_tbdatum_path(@tbdatum) %> |
+<%= link_to 'Back', tbdata_path %>

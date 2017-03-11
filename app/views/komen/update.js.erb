@@ -1,0 +1,4 @@
+$(".edit_koman").remove();
+$(".new_one").show();
+$(".edit_row").find('td:first').text('<%= raw @koman.name %>').next().text("<%= raw @koman.comment %>");
+$("tr").removeClass('edit_row');

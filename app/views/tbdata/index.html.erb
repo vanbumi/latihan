@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tbdata</h1>
+
+<table id="table_id">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Level</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tbdata.each do |tbdatum| %>
+      <tr>
+        <td><%= tbdatum.name %></td>
+        <td><%= tbdatum.level %></td>
+        <td><%= tbdatum.age %></td>
+        <td><%= tbdatum.address %></td>
+        <td><%= link_to 'Show', tbdatum %></td>
+        <td><%= link_to 'Edit', edit_tbdatum_path(tbdatum) %></td>
+        <td><%= link_to 'Destroy', tbdatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tbdatum', new_tbdatum_path %>
